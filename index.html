@@ -1,592 +1,287 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>My PDF Library</title>
-
-    <style>
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-
-        body {
-            font-family: Arial, sans-serif;
-            background: #f5f7fb;
-            color: #222;
-            line-height: 1.6;
-        }
-
-        header {
-            background: #24292f;
-            color: white;
-            padding: 25px 20px;
-            text-align: center;
-        }
-
-        header h1 {
-            margin-bottom: 5px;
-        }
-
-        header p {
-            color: #d0d7de;
-        }
-
-        .container {
-            max-width: 1000px;
-            margin: 40px auto;
-            padding: 0 20px;
-        }
-
-        .search-box {
-            margin-bottom: 25px;
-        }
-
-        .search-box input {
-            width: 100%;
-            padding: 14px 16px;
-            border: 1px solid #ccc;
-            border-radius: 8px;
-            font-size: 16px;
-            outline: none;
-        }
-
-        .search-box input:focus {
-            border-color: #0969da;
-        }
-
-        .pdf-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit,
-                    minmax(250px, 1fr));
-            gap: 20px;
-        }
-
-        .pdf-card {
-            background: white;
-            border-radius: 12px;
-            padding: 20px;
-            box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
-            transition: transform 0.2s, box-shadow 0.2s;
-        }
-
-        .pdf-card:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
-        }
-
-        .pdf-icon {
-            font-size: 40px;
-            margin-bottom: 10px;
-        }
-
-        .pdf-card h3 {
-            margin-bottom: 8px;
-            font-size: 19px;
-            word-break: break-word;
-        }
-
-        .pdf-card p {
-            color: #666;
-            font-size: 14px;
-            margin-bottom: 15px;
-        }
-
-        .buttons {
-            display: flex;
-            gap: 10px;
-        }
-
-        .btn {
-            display: inline-block;
-            text-decoration: none;
-            padding: 9px 14px;
-            border-radius: 7px;
-            font-size: 14px;
-            font-weight: bold;
-        }
-
-        .view-btn {
-            background: #0969da;
-            color: white;
-        }
-
-        .download-btn {
-            background: #eaeef2;
-            color: #24292f;
-        }
-
-        .btn:hover {
-            opacity: 0.85;
-        }
-
-        .message {
-            text-align: center;
-            color: #777;
-            margin-top: 30px;
-        }
-
-        footer {
-            text-align: center;
-            padding: 30px 20px;
-            color: #777;
-            font-size: 14px;
-        }
-
-        @media (max-width: 500px) {
-
-            .container {
-                margin-top: 25px;
-            }
-
-            .buttons {
-                flex-direction: column;
-            }
-
-            .btn {
-                text-align: center;
-            }
-
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#5b1720" />
+  <title>Temple Trail — Tamil Nadu 2026</title>
+  <link rel="stylesheet" href="app.css" />
 </head>
-
 <body>
+  <div class="mandala mandala-left">✺</div>
+  <div class="mandala mandala-right">✺</div>
 
-    <header>
-        <h1>📚 My PDF Library</h1>
-        <p>Browse and download my documents</p>
-    </header>
+  <header class="hero">
+    <nav class="topbar">
+      <div class="brand"><span class="brand-mark">ॐ</span><span>Temple Trail</span></div>
+      <a href="#budget" class="nav-pill">Trip Budget</a>
+    </nav>
 
+    <div class="hero-inner">
+      <div class="eyebrow">29 SEPTEMBER — 05 OCTOBER 2026</div>
+      <h1>A Sacred South<br><span>India Road Journey</span></h1>
+      <p class="hero-sub">Tirupati · Yelagiri · Isha · Madurai · Srirangam · Thanjavur · Chidambaram · Chennai</p>
 
-    <main class="container">
+      <div class="traveller-row">
+        <span>Gowtham</span><span>Gayathri</span><span>Sreenu</span><span>Sunayana</span>
+      </div>
 
-        <div class="search-box">
+      <div class="hero-stats">
+        <div><strong>7</strong><small>days</small></div>
+        <div><strong>~1,300</strong><small>km baseline by car</small></div>
+        <div><strong>4</strong><small>travellers</small></div>
+        <div><strong>1</strong><small>Honda Elevate ZX CVT</small></div>
+      </div>
+    </div>
+  </header>
 
-            <input type="search" id="searchInput" placeholder="Search PDFs..." autocomplete="off">
-
+  <main>
+    <section class="section intro-grid">
+      <div class="section-heading">
+        <div class="small-om">ॐ</div>
+        <p class="kicker">THE JOURNEY</p>
+        <h2>From the hills<br>to the great temples.</h2>
+      </div>
+      <div class="intro-copy">
+        <p>This itinerary is designed as a relaxed temple-and-road circuit rather than a race between destinations. The route mixes hill country, spiritual spaces, heritage temples, food stops and long highway drives.</p>
+        <div class="notice">
+          <span class="notice-icon">◈</span>
+          <div><b>Planning note</b><br>
+          Distances, drive times and tolls below are estimates. Google Maps can change the live route because of traffic, roadworks and route selection. Keep a 15–25% time buffer on long drives.</div>
         </div>
+      </div>
+    </section>
 
+    <section class="route-strip">
+      <div class="route-line"></div>
+      <div class="route-node"><span>HYD</span><small>Hyderabad</small></div>
+      <div class="route-node"><span>TRP</span><small>Tirupati</small></div>
+      <div class="route-node"><span>YLG</span><small>Yelagiri</small></div>
+      <div class="route-node"><span>ISH</span><small>Isha</small></div>
+      <div class="route-node"><span>MDU</span><small>Madurai</small></div>
+      <div class="route-node"><span>SRG</span><small>Srirangam</small></div>
+      <div class="route-node"><span>TJ</span><small>Thanjavur</small></div>
+      <div class="route-node"><span>CHE</span><small>Chennai</small></div>
+    </section>
 
-        <div class="pdf-grid" id="pdfGrid">
+    <section class="section" id="itinerary">
+      <div class="section-title">
+        <div><p class="kicker">DAY BY DAY</p><h2>The itinerary</h2></div>
+        <div class="title-ornament">❈</div>
+      </div>
+
+      <article class="day-card">
+        <div class="day-badge"><b>29</b><span>SEP</span></div>
+        <div class="day-content">
+          <div class="day-head"><div><p class="kicker">DAY 0 · TRAVELERS CONVERGE</p><h3>Hyderabad & Vijayawada → Tirupati / Naidupeta</h3></div><span class="status night">NIGHT DRIVE</span></div>
+          <div class="timeline">
+            <div class="event"><time>29 Sep · Night</time><p><b>Gayathri, Sreenu & Sunayana</b> travel by train towards the Tirupati / Naidupeta side. Their exact train numbers and arrival stations are intentionally left open in this planner.</p></div>
+            <div class="event"><time>By ~4–5 AM</time><p>The three travellers are expected to be positioned for the morning pickup.</p></div>
+            <div class="event"><time>~5:00 AM · Sep 30</time><p><b>Gowtham starts from Naidupeta by car</b> for the Tirupati pickup. This is the default starting point for the car-cost calculation.</p></div>
+          </div>
+          <div class="day-note">✓ <b>Confirmed planning assumption:</b> the Honda Elevate road trip starts at Naidupeta. No Hyderabad → Naidupeta driving leg is included in the car distance, petrol or toll estimate.</div>
         </div>
+      </article>
 
-
-        <div class="message" id="message">
-            Loading PDFs...
+      <article class="day-card featured">
+        <div class="day-badge"><b>30</b><span>SEP</span></div>
+        <div class="day-content">
+          <div class="day-head"><div><p class="kicker">DAY 1 · HILLS & BIRIYANI</p><h3>Naidupeta → Tirupati → Ambur → Yelagiri</h3></div><span class="status">~197 KM</span></div>
+          <div class="timeline">
+            <div class="event"><time>~5:00 AM</time><p>Gowtham picks up <b>Sreenu & Sunayana</b> from Naidupeta.</p></div>
+            <div class="event"><time>~6:30 AM</time><p>Reach Tirupati and pick up <b>Gayathri</b>.</p></div>
+            <div class="event"><time>8:00 AM</time><p>Leave Tirupati for Yelagiri via Ambur.</p></div>
+            <div class="event"><time>~11:00 AM</time><p>Ambur food stop — collect the planned famous biryani parcel.</p></div>
+            <div class="event"><time>~1:00 PM</time><p>Reach Yelagiri, explore, lunch and check in at Eco Village.</p></div>
+            <div class="event"><time>Evening</time><p>Freshen up and explore Yelagiri till night.</p></div>
+          </div>
+          <div class="route-metrics">
+            <span>Naidupeta → Tirupati <b>~66–68 km · ~1 hr</b></span>
+            <span>Tirupati → Yelagiri <b>~170 km road · ~3h+</b></span>
+          </div>
+          <a class="maps-btn" href="https://www.google.com/maps/dir/Naidupeta,+Andhra+Pradesh/Tirupati,+Andhra+Pradesh/Yelagiri,+Tamil+Nadu/" target="_blank" rel="noopener">↗ Open route in Google Maps</a>
         </div>
-
-    </main>
-
-
-    <footer>
-        © 2026 My PDF Library
-    </footer>
-
-
-    <script>
-
-        const PDF_FOLDER = "stays/";
-
-
-        let pdfFiles = [];
-
-
-        /*
-         * Convert filename to readable title.
-         *
-         * Example:
-         *
-         * my-hotel-booking.pdf
-         *
-         * becomes:
-         *
-         * My Hotel Booking
-         */
-
-        function formatTitle(filename) {
-
-            return filename
-                .replace(/\.pdf$/i, "")
-                .replace(/[-_]+/g, " ")
-                .replace(/\s+/g, " ")
-                .trim()
-                .replace(/\b\w/g, function (char) {
-                    return char.toUpperCase();
-                });
-
-        }
-
-
-        /*
-         * Get PDF files from /stays/
-         */
-
-        async function loadPDFs() {
-
-            const message =
-                document.getElementById("message");
-
-
-            try {
-
-                const response =
-                    await fetch(PDF_FOLDER);
-
-
-                if (!response.ok) {
-                    throw new Error(
-                        "Could not access the stays folder."
-                    );
-                }
-
-
-                const html =
-                    await response.text();
-
-
-                /*
-                 * Parse directory listing HTML
-                 */
-
-                const parser =
-                    new DOMParser();
-
-
-                const documentHTML =
-                    parser.parseFromString(
-                        html,
-                        "text/html"
-                    );
-
-
-                /*
-                 * Find all links ending in .pdf
-                 */
-
-                const links =
-                    documentHTML.querySelectorAll("a");
-
-
-                pdfFiles = [];
-
-
-                links.forEach(function (link) {
-
-                    const href =
-                        link.getAttribute("href");
-
-
-                    if (!href) {
-                        return;
-                    }
-
-
-                    /*
-                     * Only accept PDF files.
-                     */
-
-                    if (
-                        href
-                            .split("?")[0]
-                            .toLowerCase()
-                            .endsWith(".pdf")
-                    ) {
-
-                        /*
-                         * Get filename from URL.
-                         */
-
-                        const filename =
-                            decodeURIComponent(
-                                href.split("/").pop()
-                            );
-
-
-                        if (filename) {
-
-                            pdfFiles.push(filename);
-
-                        }
-
-                    }
-
-                });
-
-
-                /*
-                 * Remove duplicates
-                 */
-
-                pdfFiles =
-                    [...new Set(pdfFiles)];
-
-
-                /*
-                 * Sort alphabetically
-                 */
-
-                pdfFiles.sort(
-                    (a, b) =>
-                        a.localeCompare(
-                            b,
-                            undefined,
-                            {
-                                numeric: true,
-                                sensitivity: "base"
-                            }
-                        )
-                );
-
-
-                renderPDFs(pdfFiles);
-
-
-                if (pdfFiles.length === 0) {
-
-                    message.textContent =
-                        "No PDF files found in stays/";
-
-                } else {
-
-                    message.style.display =
-                        "none";
-
-                }
-
-            }
-            catch (error) {
-
-                console.error(error);
-
-
-                message.textContent =
-                    "Unable to load PDFs from stays/. " +
-                    "Make sure directory listing is enabled.";
-
-            }
-
-        }
-
-
-        /*
-         * Create PDF card
-         */
-
-        function createPDFCard(filename) {
-
-            const url =
-                PDF_FOLDER +
-                encodeURIComponent(filename);
-
-
-            const card =
-                document.createElement("div");
-
-            card.className =
-                "pdf-card";
-
-
-            const icon =
-                document.createElement("div");
-
-            icon.className =
-                "pdf-icon";
-
-            icon.textContent =
-                "📄";
-
-
-            const title =
-                document.createElement("h3");
-
-            title.textContent =
-                formatTitle(filename);
-
-
-            const description =
-                document.createElement("p");
-
-            description.textContent =
-                "PDF document";
-
-
-            const buttons =
-                document.createElement("div");
-
-            buttons.className =
-                "buttons";
-
-
-            /*
-             * Native browser PDF viewer
-             */
-
-            const viewButton =
-                document.createElement("a");
-
-            viewButton.href =
-                url;
-
-            viewButton.target =
-                "_blank";
-
-            viewButton.rel =
-                "noopener";
-
-            viewButton.className =
-                "btn view-btn";
-
-            viewButton.textContent =
-                "View PDF";
-
-
-            /*
-             * Download
-             */
-
-            const downloadButton =
-                document.createElement("a");
-
-            downloadButton.href =
-                url;
-
-            downloadButton.download =
-                filename;
-
-            downloadButton.className =
-                "btn download-btn";
-
-            downloadButton.textContent =
-                "Download";
-
-
-            buttons.appendChild(
-                viewButton
-            );
-
-            buttons.appendChild(
-                downloadButton
-            );
-
-
-            card.appendChild(icon);
-            card.appendChild(title);
-            card.appendChild(description);
-            card.appendChild(buttons);
-
-
-            return card;
-
-        }
-
-
-        /*
-         * Render PDF cards
-         */
-
-        function renderPDFs(files) {
-
-            const grid =
-                document.getElementById(
-                    "pdfGrid"
-                );
-
-
-            grid.innerHTML = "";
-
-
-            files.forEach(function (filename) {
-
-                grid.appendChild(
-                    createPDFCard(filename)
-                );
-
-            });
-
-        }
-
-
-        /*
-         * Search
-         */
-
-        function searchPDFs() {
-
-            const query =
-                document
-                    .getElementById("searchInput")
-                    .value
-                    .toLowerCase()
-                    .trim();
-
-
-            const filtered =
-                pdfFiles.filter(
-                    function (filename) {
-
-                        return formatTitle(filename)
-                            .toLowerCase()
-                            .includes(query);
-
-                    }
-                );
-
-
-            renderPDFs(filtered);
-
-
-            const message =
-                document.getElementById(
-                    "message"
-                );
-
-
-            if (
-                pdfFiles.length > 0 &&
-                filtered.length === 0
-            ) {
-
-                message.textContent =
-                    "No PDFs found.";
-
-                message.style.display =
-                    "block";
-
-            } else {
-
-                message.style.display =
-                    "none";
-
-            }
-
-        }
-
-
-        /*
-         * Search as user types
-         */
-
-        document
-            .getElementById("searchInput")
-            .addEventListener(
-                "input",
-                searchPDFs
-            );
-
-
-        /*
-         * Start
-         */
-
-        loadPDFs();
-
-    </script>
-
+      </article>
+
+      <article class="day-card">
+        <div class="day-badge"><b>01</b><span>OCT</span></div>
+        <div class="day-content">
+          <div class="day-head"><div><p class="kicker">DAY 2 · TOWARDS THE FOOTHILLS</p><h3>Yelagiri → Salem / Tirupur → Isha Yoga Center</h3></div><span class="status">LONG DRIVE</span></div>
+          <div class="timeline">
+            <div class="event"><time>6:00–8:00 AM</time><p>Freshen up, breakfast and depart Yelagiri.</p></div>
+            <div class="event"><time>Daytime</time><p>Tentative temple / shopping stop around Salem or Tirupur. Keep this optional if the road is running late.</p></div>
+            <div class="event"><time>5:00–6:00 PM</time><p>Target arrival at Isha Yoga Center and cottage check-in.</p></div>
+            <div class="event"><time>Evening</time><p>Attend <b>Adiyogi Divya Darshanam</b> / light-show experience. Isha's current official page lists it daily at 7 PM; rain can cancel the show.</p></div>
+            <div class="event"><time>Night</time><p>Dinner at Isha and rest.</p></div>
+          </div>
+          <div class="route-metrics"><span>Yelagiri → Coimbatore/Isha <b>~280–316 km · ~4–6 hr</b></span><span>Buffer <b>+45–90 min</b></span></div>
+          <a class="maps-btn" href="https://www.google.com/maps/dir/Yelagiri,+Tamil+Nadu/Isha+Yoga+Center,+Coimbatore,+Tamil+Nadu/" target="_blank" rel="noopener">↗ Open route in Google Maps</a>
+        </div>
+      </article>
+
+      <article class="day-card featured">
+        <div class="day-badge"><b>02</b><span>OCT</span></div>
+        <div class="day-content">
+          <div class="day-head"><div><p class="kicker">DAY 3 · STILLNESS</p><h3>Isha → Madurai · Meenakshi Amman Temple</h3></div><span class="status">~238 KM</span></div>
+          <div class="timeline">
+            <div class="event"><time>Early AM</time><p>Bath / visit Suryakund or Chandrakund and begin the Isha experience.</p></div>
+            <div class="event"><time>Morning</time><p>Dhyanalinga, Linga Bhairavi and other spaces; brunch at Bhiksha Hall.</p></div>
+            <div class="event"><time>~2:00 PM</time><p>Check out and depart for Madurai.</p></div>
+            <div class="event"><time>~7:00–8:00 PM</time><p>Hotel check-in, get ready and visit Meenakshi Temple / temple streets. Official temple timing is 4:00–10:00 PM in the evening.</p></div>
+          </div>
+          <div class="route-metrics"><span>Isha → Madurai <b>~238–240 km · ~5–5.5 hr</b></span><span>Fuel + toll <b>~₹2,000–2,500</b></span></div>
+          <a class="maps-btn" href="https://www.google.com/maps/dir/Isha+Yoga+Center,+Coimbatore,+Tamil+Nadu/Madurai+Meenakshi+Amman+Temple,+Madurai,+Tamil+Nadu/" target="_blank" rel="noopener">↗ Open route in Google Maps</a>
+        </div>
+      </article>
+
+      <article class="day-card">
+        <div class="day-badge"><b>03</b><span>OCT</span></div>
+        <div class="day-content">
+          <div class="day-head"><div><p class="kicker">DAY 4 · TEMPLE TOWNS</p><h3>Madurai → Srirangam → Thanjavur</h3></div><span class="status">HERITAGE DAY</span></div>
+          <div class="timeline">
+            <div class="event"><time>Morning</time><p>Explore more of Madurai until lunch.</p></div>
+            <div class="event"><time>Post-lunch</time><p>Drive to Srirangam. Plan Sri Ranganathaswamy Temple with its darshan windows.</p></div>
+            <div class="event"><time>Late afternoon/evening</time><p>Optional nearby temples / Pancha Bhoota-related stops, subject to opening hours and energy.</p></div>
+            <div class="event"><time>Evening</time><p>Drive to Thanjavur and stay overnight.</p></div>
+          </div>
+          <div class="route-metrics"><span>Madurai → Srirangam <b>~133 km · ~2 hr 10 min</b></span><span>Srirangam → Thanjavur <b>~57 km · ~1 hr</b></span></div>
+          <a class="maps-btn" href="https://www.google.com/maps/dir/Madurai,+Tamil+Nadu/Sri+Ranganathaswamy+Temple,+Srirangam,+Tamil+Nadu/Thanjavur,+Tamil+Nadu/" target="_blank" rel="noopener">↗ Open route in Google Maps</a>
+        </div>
+      </article>
+
+      <article class="day-card">
+        <div class="day-badge"><b>04</b><span>OCT</span></div>
+        <div class="day-content">
+          <div class="day-head"><div><p class="kicker">DAY 5 · CHOLA GRANDEUR</p><h3>Thanjavur → Chidambaram? → Chennai Central</h3></div><span class="status warning">TRAIN DEADLINE</span></div>
+          <div class="timeline">
+            <div class="event"><time>Early AM</time><p>Visit <b>Brihadeeswarar Temple</b> and check out. Current published timings show a morning window around 6:00 AM–12:30 PM.</p></div>
+            <div class="event"><time>Optional</time><p>Chidambaram detour for Thillai Nataraja Temple / Pancha Bhoota Sthalam. Thanjavur → Chidambaram is roughly 107–130 km depending on route.</p></div>
+            <div class="event"><time>By ~5:00 PM</time><p><b>Hard deadline:</b> reach Chennai Central Railway Station for the trains.</p></div>
+            <div class="event"><time>6:20 PM</time><p>Gayathri's train to Hyderabad.</p></div>
+            <div class="event"><time>7:30 PM</time><p>Sreenu & Sunayana's train to Vijayawada.</p></div>
+            <div class="event"><time>Night</time><p>Gowtham remains in Chennai for work.</p></div>
+          </div>
+          <div class="day-note">⚠ <b>Recommendation:</b> Treat Chidambaram as a conditional stop. If leaving Thanjavur late, skip it rather than risking the 5:00 PM Chennai Central deadline.</div>
+          <div class="route-metrics"><span>Thanjavur → Chennai <b>~319–349 km · ~5–6 hr</b></span><span>Via Chidambaram <b>~340–355+ km</b></span></div>
+          <a class="maps-btn" href="https://www.google.com/maps/dir/Thanjavur,+Tamil+Nadu/Chidambaram,+Tamil+Nadu/Chennai+Central,+Chennai,+Tamil+Nadu/" target="_blank" rel="noopener">↗ Open optional route in Google Maps</a>
+        </div>
+      </article>
+
+      <article class="day-card last">
+        <div class="day-badge"><b>05</b><span>OCT</span></div>
+        <div class="day-content">
+          <div class="day-head"><div><p class="kicker">DAY 6 · JOURNEY HOME</p><h3>Hyderabad & Vijayawada arrivals</h3></div><span class="status">CLOSING</span></div>
+          <div class="timeline">
+            <div class="event"><time>~6:00 AM</time><p>Gayathri reaches Hyderabad.</p></div>
+            <div class="event"><time>~6:00 AM</time><p>Sreenu & Sunayana reach Vijayawada.</p></div>
+            <div class="event"><time>Daytime</time><p>Gowtham remains in Chennai for work.</p></div>
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <section class="section temple-section">
+      <div class="section-title"><div><p class="kicker">SACRED STOPS</p><h2>Temple rhythm</h2></div><div class="title-ornament">☸</div></div>
+      <div class="temple-grid">
+        <div class="temple-card"><span class="temple-symbol">ॐ</span><h3>Meenakshi Amman</h3><p>Madurai</p><b>05:00–12:30 · 16:00–22:00</b><a href="https://www.google.com/maps/search/?api=1&query=Meenakshi+Amman+Temple+Madurai" target="_blank">Map ↗</a></div>
+        <div class="temple-card"><span class="temple-symbol">◉</span><h3>Ranganathaswamy</h3><p>Srirangam</p><b>06:00–12:00 · 12:00–21:00*</b><a href="https://www.google.com/maps/search/?api=1&query=Sri+Ranganathaswamy+Temple+Srirangam" target="_blank">Map ↗</a></div>
+        <div class="temple-card"><span class="temple-symbol">✦</span><h3>Brihadeeswarar</h3><p>Thanjavur</p><b>~06:00–12:30 · 16:00–20:30</b><a href="https://www.google.com/maps/search/?api=1&query=Brihadeeswarar+Temple+Thanjavur" target="_blank">Map ↗</a></div>
+        <div class="temple-card"><span class="temple-symbol">◈</span><h3>Thillai Nataraja</h3><p>Chidambaram</p><b>~06:00–12:00 · 17:00–22:00</b><a href="https://www.google.com/maps/search/?api=1&query=Thillai+Nataraja+Temple+Chidambaram" target="_blank">Map ↗</a></div>
+      </div>
+      <p class="footnote">* Temple schedules can change on festival days, special poojas and local events. Verify shortly before travel.</p>
+    </section>
+
+    <section class="section budget-section" id="budget">
+      <div class="section-title"><div><p class="kicker">ROAD BUDGET</p><h2>Petrol · toll · trip cost</h2></div><div class="title-ornament">₹</div></div>
+      <div class="budget-grid">
+        <div class="budget-card">
+          <div class="budget-label">CAR</div>
+          <h3>Honda Elevate ZX CVT</h3>
+          <p>Honda publishes <b>16.92 km/l</b> for the Elevate CVT. For a loaded real-world road trip with AC, hills and traffic, this planner uses an editable <b>14 km/l</b> working estimate.</p>
+        </div>
+        <div class="budget-card">
+          <div class="budget-label">FUEL ASSUMPTION</div>
+          <h3>₹116 / litre</h3>
+          <p>Approximate planning rate based on late-August 2026 Hyderabad/Tamil Nadu petrol prices. Change it below before the trip.</p>
+        </div>
+        <div class="budget-card total-card">
+          <div class="budget-label">PLANNED CAR DISTANCE</div>
+          <h3 id="totalDistance">~1,300 km</h3>
+          <p>Baseline starts at Naidupeta: Naidupeta → Tirupati → Yelagiri → Isha → Madurai → Srirangam → Thanjavur → Chennai. Local sightseeing is added separately below.</p>
+        </div>
+      </div>
+
+      <div class="calculator">
+        <div class="calc-controls">
+          <label>Working mileage (km/l)<input id="mileage" type="number" min="8" max="25" step="0.1" value="14"></label>
+          <label>Petrol ₹/L<input id="petrol" type="number" min="80" max="160" step="0.1" value="116"></label>
+          <label>Toll buffer ₹<input id="toll" type="number" min="0" max="5000" step="10" value="900"></label>
+          <label>Extra local km<input id="localKm" type="number" min="0" max="500" step="10" value="120"></label>
+        </div>
+        <div class="calc-results">
+          <div><span>Fuel litres</span><strong id="litres">101.6 L</strong></div>
+          <div><span>Petrol</span><strong id="fuelCost">₹11,790</strong></div>
+          <div><span>Tolls</span><strong id="tollCost">₹900</strong></div>
+          <div><span>Fuel + toll</span><strong id="tripCost">₹12,690</strong></div>
+        </div>
+        <p class="calc-note">The calculator intentionally uses a conservative real-world mileage. Replace the toll buffer with your latest FASTag estimate closer to departure. Parking, food, hotels and train tickets are excluded.</p>
+      </div>
+    </section>
+
+    <section class="section route-table-section">
+      <div class="section-title"><div><p class="kicker">DRIVE SHEET</p><h2>Distance & cost at a glance</h2></div></div>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Leg</th><th>Approx. km</th><th>Drive time</th><th>Car fuel*</th><th>Toll budget</th></tr></thead>
+          <tbody>
+            <tr><td>Naidupeta → Tirupati</td><td>66</td><td>~1h</td><td>~₹550</td><td>₹0–100</td></tr>
+            <tr><td>Tirupati → Yelagiri</td><td>~197</td><td>~3h30</td><td>~₹1,630</td><td>₹0–600</td></tr>
+            <tr><td>Yelagiri → Isha</td><td>~280–316</td><td>~4–6h</td><td>~₹2,320–2,620</td><td>₹100–300</td></tr>
+            <tr><td>Isha → Madurai</td><td>~238</td><td>~5–5h30</td><td>~₹1,970</td><td>~₹70–200</td></tr>
+            <tr><td>Madurai → Srirangam</td><td>~133</td><td>~2h10</td><td>~₹1,100</td><td>~₹0–150</td></tr>
+            <tr><td>Srirangam → Thanjavur</td><td>~57</td><td>~1h</td><td>~₹470</td><td>~₹80–100</td></tr>
+            <tr><td>Thanjavur → Chennai</td><td>~319–349</td><td>~5–6h</td><td>~₹2,650–2,900</td><td>~₹295+</td></tr>
+            <tr class="optional"><td>Thanjavur → Chidambaram → Chennai</td><td>~330–355+</td><td>~5h30–7h+</td><td>~₹2,750–2,950</td><td>~₹240+ after Chidambaram</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="footnote">* Fuel column uses 14 km/l and ₹116/L. Toll figures are planning ranges assembled from published route/toll calculators; they are not a live FASTag quote.</p>
+    </section>
+
+    <section class="section packing">
+      <div class="section-title"><div><p class="kicker">BEFORE YOU LEAVE</p><h2>Small things that save the trip</h2></div></div>
+      <div class="check-grid">
+        <label><input type="checkbox"> FASTag balance topped up</label>
+        <label><input type="checkbox"> Temple-appropriate clothing</label>
+        <label><input type="checkbox"> IDs / train tickets</label>
+        <label><input type="checkbox"> Phone chargers + power bank</label>
+        <label><input type="checkbox"> Water bottles</label>
+        <label><input type="checkbox"> Basic medicines / first-aid</label>
+        <label><input type="checkbox"> Offline maps downloaded</label>
+        <label><input type="checkbox"> Hotel & Isha bookings saved offline</label>
+        <label><input type="checkbox"> Emergency tyre / puncture kit</label>
+        <label><input type="checkbox"> Fuel before long temple stretches</label>
+      </div>
+    </section>
+
+    <section class="section sources">
+      <p class="kicker">DATA NOTES</p>
+      <h2>What the estimates are based on</h2>
+      <div class="source-list">
+        <p><b>Honda Elevate:</b> Honda Cars India currently lists 16.92 km/l for the CVT under certified test conditions; this planner uses 14 km/l as a conservative real-world working estimate.</p>
+        <p><b>Road distances:</b> route planners and distance calculators; live Google Maps should be treated as the final navigation source.</p>
+        <p><b>Temple timings:</b> official HR&CE / Isha pages where available; verify festival-day changes.</p>
+        <p><b>Fuel:</b> late-August 2026 published city prices used only as a planning reference. September/October prices may change.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-om">ॐ</div>
+    <p>May the road be smooth, the darshan be peaceful,<br>and the biryani arrive hot. ✦</p>
+    <small>Temple Trail · September–October 2026</small>
+  </footer>
+
+  <script src="app.js"></script>
 </body>
-
 </html>
